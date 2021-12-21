@@ -1,0 +1,198 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Plugins/FKGifCreator/Assets/UI_GifCreator.gd" type="Script" id=1]
+[ext_resource path="res://Plugins/FKGifCreator/Assets/Fonts/SourceHanSansCN-Regular.tres" type="DynamicFont" id=2]
+
+[node name="GifGetterUI" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="MarginContainer" parent="Control"]
+margin_left = 10.0
+margin_top = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Options"]
+margin_right = 296.0
+margin_bottom = 238.0
+
+[node name="ButtonContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 30.0
+
+[node name="CaptureNowButton" type="Button" parent="Control/Options/VBoxContainer/ButtonContainer"]
+margin_right = 76.0
+margin_bottom = 30.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "立刻录制"
+
+[node name="CaptureInFiveSecondsButton" type="Button" parent="Control/Options/VBoxContainer/ButtonContainer"]
+margin_left = 80.0
+margin_right = 197.0
+margin_bottom = 30.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "5秒后开始录制"
+
+[node name="SaveLocationContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 34.0
+margin_right = 296.0
+margin_bottom = 64.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/SaveLocationContainer"]
+margin_top = 3.0
+margin_right = 64.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 2 )
+text = "保存路径"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/SaveLocationContainer"]
+margin_left = 68.0
+margin_right = 138.0
+margin_bottom = 30.0
+text = "result.gif"
+expand_to_text_length = true
+
+[node name="Button" type="Button" parent="Control/Options/VBoxContainer/SaveLocationContainer"]
+margin_left = 142.0
+margin_right = 250.0
+margin_bottom = 30.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "选择保存路径"
+
+[node name="RenderQualityContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 68.0
+margin_right = 296.0
+margin_bottom = 92.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/RenderQualityContainer"]
+margin_right = 234.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 2 )
+text = "渲染质量（1-30，1表示最清晰）"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/RenderQualityContainer"]
+margin_left = 238.0
+margin_right = 296.0
+margin_bottom = 24.0
+text = "10"
+
+[node name="FramesContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 96.0
+margin_right = 296.0
+margin_bottom = 120.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/FramesContainer"]
+margin_right = 80.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 2 )
+text = "总录制帧数"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/FramesContainer"]
+margin_left = 84.0
+margin_right = 142.0
+margin_bottom = 24.0
+text = "60"
+
+[node name="FrameSkipContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 124.0
+margin_right = 296.0
+margin_bottom = 148.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/FrameSkipContainer"]
+margin_right = 112.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 2 )
+text = "每两帧间隔帧数"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/FrameSkipContainer"]
+margin_left = 116.0
+margin_right = 174.0
+margin_bottom = 24.0
+text = "1"
+
+[node name="FrameDelayContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 152.0
+margin_right = 296.0
+margin_bottom = 176.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/FrameDelayContainer"]
+margin_right = 81.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 2 )
+text = "帧延迟(ms)"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/FrameDelayContainer"]
+margin_left = 85.0
+margin_right = 143.0
+margin_bottom = 24.0
+text = "100"
+
+[node name="ThreadsContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 180.0
+margin_right = 296.0
+margin_bottom = 204.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/ThreadsContainer"]
+margin_right = 48.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 2 )
+text = "线程数"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/ThreadsContainer"]
+margin_left = 52.0
+margin_right = 110.0
+margin_bottom = 24.0
+text = "4"
+
+[node name="HotkeyContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer"]
+margin_top = 208.0
+margin_right = 296.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/HotkeyContainer"]
+margin_top = 3.0
+margin_right = 129.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 2 )
+text = "隐藏本UI的快捷键"
+
+[node name="LineEdit" type="LineEdit" parent="Control/Options/VBoxContainer/HotkeyContainer"]
+margin_left = 133.0
+margin_right = 191.0
+margin_bottom = 30.0
+expand_to_text_length = true
+
+[node name="Button" type="Button" parent="Control/Options/VBoxContainer/HotkeyContainer"]
+margin_left = 195.0
+margin_right = 239.0
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 2 )
+text = "设置"
+
+[node name="Console" type="MarginContainer" parent="Control"]
+anchor_top = 0.8
+anchor_right = 0.3
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Console"]
+margin_right = 297.0
+margin_bottom = 110.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Console/ScrollContainer"]
+alignment = 2

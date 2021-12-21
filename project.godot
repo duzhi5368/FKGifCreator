@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="【游戏】游戏中录屏工具"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://Plugins/FKGifCreator/Assets/logo.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.180392, 0.360784, 0.792157, 1 )
+config/icon="res://Plugins/FKGifCreator/Assets/logo.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
